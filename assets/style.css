@@ -3,151 +3,100 @@
 @media(max-width:480px){header{height:126px;min-height:126px;padding-right:58px}.brand{height:112px}.brand img{height:112px}.toggle{right:9px;padding:7px 8px;font-size:21px}.announcement{font-size:9px;line-height:1.5;padding:7px 10px}}
 
 
-/* FINAL MOBILE FULL-BANNER HEADER OVERRIDE */
-@media (max-width: 900px) {
-  header {
-    display: block !important;
-    position: sticky !important;
-    height: 154px !important;
-    min-height: 154px !important;
-    padding: 0 !important;
-    overflow: visible !important;
-  }
-  header .brand {
-    display: block !important;
-    width: 100% !important;
-    height: 154px !important;
-    min-width: 0 !important;
-    margin: 0 !important;
-    overflow: hidden !important;
-  }
-  header .brand img {
-    display: block !important;
-    width: 100% !important;
-    height: 154px !important;
-    max-height: none !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-  }
-  header .toggle {
-    display: block !important;
-    position: absolute !important;
-    top: 50% !important;
-    right: 12px !important;
-    transform: translateY(-50%) !important;
-    z-index: 20 !important;
-    padding: 8px 10px !important;
-    color: #d5b168 !important;
-    background: rgba(8,22,41,.88) !important;
-    border: 1px solid rgba(213,177,104,.65) !important;
-    border-radius: 5px !important;
-  }
-  header nav {
-    display: none !important;
-    position: absolute !important;
-    top: 100% !important;
-    left: 0 !important;
-    right: 0 !important;
-    z-index: 19 !important;
-    background: #0a1c30 !important;
-    padding: 18px !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-  }
-  header nav.open { display: flex !important; }
-}
-@media (max-width: 480px) {
-  header, header .brand, header .brand img {
-    height: 132px !important;
-    min-height: 132px !important;
-  }
-}
 
 
-/* AZDS MOBILE EDGE-TO-EDGE BRAND BANNER */
+/* COMPLETE REFRESH: EDGE-TO-EDGE MOBILE BRAND BANNER */
+.brand .mobile-banner { display:none; }
 @media screen and (max-width: 900px) {
-  body > header,
   header {
-    box-sizing: border-box !important;
-    display: block !important;
-    width: 100% !important;
-    max-width: none !important;
-    height: 132px !important;
-    min-height: 132px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    position: relative !important;
-    overflow: visible !important;
-    border-bottom: 1px solid rgba(213,177,104,.28) !important;
-    background: #06172b !important;
+    box-sizing:border-box !important;
+    display:block !important;
+    width:100% !important;
+    max-width:none !important;
+    height:clamp(178px, 31vw, 218px) !important;
+    min-height:0 !important;
+    margin:0 !important;
+    padding:0 !important;
+    position:sticky !important;
+    top:0 !important;
+    overflow:visible !important;
+    background:#06172b !important;
+    border-bottom:1px solid rgba(213,177,104,.5) !important;
+    z-index:30 !important;
   }
   header > a.brand {
-    box-sizing: border-box !important;
-    display: block !important;
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 132px !important;
-    min-width: 0 !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: hidden !important;
-    border: 0 !important;
+    display:block !important;
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    max-width:none !important;
+    min-width:0 !important;
+    margin:0 !important;
+    padding:0 !important;
+    overflow:hidden !important;
   }
-  header > a.brand img {
-    box-sizing: border-box !important;
-    display: block !important;
-    position: absolute !important;
-    inset: 0 !important;
-    width: 100% !important;
-    height: 132px !important;
-    max-width: none !important;
-    max-height: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-    border: 0 !important;
-    border-radius: 0 !important;
+  header .brand .desktop-logo { display:none !important; }
+  header .brand .mobile-banner {
+    display:block !important;
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    max-width:none !important;
+    max-height:none !important;
+    margin:0 !important;
+    padding:0 !important;
+    object-fit:cover !important;
+    object-position:center 48% !important;
+    border:0 !important;
+    border-radius:0 !important;
   }
   header > button.toggle {
-    box-sizing: border-box !important;
-    display: block !important;
-    position: absolute !important;
-    top: 50% !important;
-    right: 12px !important;
-    left: auto !important;
-    transform: translateY(-50%) !important;
-    z-index: 50 !important;
-    margin: 0 !important;
-    padding: 8px 10px !important;
-    color: #e2bd70 !important;
-    background: rgba(4,16,31,.82) !important;
-    border: 1px solid rgba(226,189,112,.7) !important;
-    border-radius: 5px !important;
-    font-size: 24px !important;
-    line-height: 1 !important;
+    display:block !important;
+    position:absolute !important;
+    top:50% !important;
+    right:12px !important;
+    left:auto !important;
+    transform:translateY(-50%) !important;
+    z-index:40 !important;
+    margin:0 !important;
+    padding:9px 11px !important;
+    color:#ffe09a !important;
+    background:rgba(3,14,28,.78) !important;
+    border:1px solid rgba(255,224,154,.85) !important;
+    border-radius:6px !important;
+    font-size:25px !important;
+    line-height:1 !important;
+    box-shadow:0 3px 16px #0008 !important;
   }
   header > nav {
-    display: none !important;
-    position: absolute !important;
-    top: 100% !important;
-    left: 0 !important;
-    right: 0 !important;
-    z-index: 49 !important;
-    padding: 18px !important;
-    background: #081a2e !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
+    display:none !important;
+    position:absolute !important;
+    top:100% !important;
+    left:0 !important;
+    right:0 !important;
+    z-index:39 !important;
+    padding:18px 20px !important;
+    background:#071a2e !important;
+    border-bottom:1px solid #d5b16866 !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
   }
-  header > nav.open { display: flex !important; }
+  header > nav.open { display:flex !important; }
+  .hero { padding-top:64px !important; }
 }
 @media screen and (max-width: 480px) {
-  header,
-  header > a.brand,
-  header > a.brand img {
-    height: 132px !important;
-    min-height: 132px !important;
-  }
+  header { height:190px !important; }
 }
+@media screen and (min-width:481px) and (max-width:900px) {
+  header { height:205px !important; }
+}
+
+/* Brighten supporting text and panels for stronger contrast. */
+body { color:#fffaf0; }
+.hero-copy>p,.heading>p,.about p,.faq>div>p,.contact>div>p,
+.grid p,.grid li { color:#c2cfdd; }
+.grid article { background:linear-gradient(145deg,#193650,#10263d); }
+.strip { color:#f1f5fa; }
+footer { color:#f4f1e9; }
