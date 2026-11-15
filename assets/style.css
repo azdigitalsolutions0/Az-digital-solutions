@@ -62,3 +62,92 @@
     min-height: 132px !important;
   }
 }
+
+
+/* AZDS MOBILE EDGE-TO-EDGE BRAND BANNER */
+@media screen and (max-width: 900px) {
+  body > header,
+  header {
+    box-sizing: border-box !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 132px !important;
+    min-height: 132px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+    overflow: visible !important;
+    border-bottom: 1px solid rgba(213,177,104,.28) !important;
+    background: #06172b !important;
+  }
+  header > a.brand {
+    box-sizing: border-box !important;
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 132px !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    border: 0 !important;
+  }
+  header > a.brand img {
+    box-sizing: border-box !important;
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 132px !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+  }
+  header > button.toggle {
+    box-sizing: border-box !important;
+    display: block !important;
+    position: absolute !important;
+    top: 50% !important;
+    right: 12px !important;
+    left: auto !important;
+    transform: translateY(-50%) !important;
+    z-index: 50 !important;
+    margin: 0 !important;
+    padding: 8px 10px !important;
+    color: #e2bd70 !important;
+    background: rgba(4,16,31,.82) !important;
+    border: 1px solid rgba(226,189,112,.7) !important;
+    border-radius: 5px !important;
+    font-size: 24px !important;
+    line-height: 1 !important;
+  }
+  header > nav {
+    display: none !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 49 !important;
+    padding: 18px !important;
+    background: #081a2e !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  header > nav.open { display: flex !important; }
+}
+@media screen and (max-width: 480px) {
+  header,
+  header > a.brand,
+  header > a.brand img {
+    height: 132px !important;
+    min-height: 132px !important;
+  }
+}
