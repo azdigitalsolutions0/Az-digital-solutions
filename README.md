@@ -29,3 +29,13 @@ The enquiry form opens WhatsApp with a pre-filled message. It does not send mess
 
 ## Brand assets
 Your supplied AZ Digital Solutions horizontal logo is used in the header and footer. The round logo is used in the About section and as the browser favicon/app icon.
+
+
+## Mobile header update
+The horizontal brand artwork now displays as a full-width banner on mobile screens, with the navigation menu directly below it.
+
+
+## Latest mobile header refresh
+The mobile header now uses a dedicated, brighter, panoramic AZ Digital Solutions banner (`assets/az-header-banner.jpg`) that spans the full screen width edge-to-edge. The menu button overlays the banner. Desktop keeps the horizontal logo treatment. The stylesheet URL includes a cache-busting version.
+
+When updating an existing GitHub repository, upload/replace the complete contents of this ZIP in the repository root, preserving the `assets/` folder structure. Commit all changes, then refresh the website in a private/incognito tab.
