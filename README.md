@@ -6,7 +6,9 @@ A fresh responsive static website built with HTML, CSS and JavaScript.
 - Premium dark navy + champagne gold visual system
 - User-supplied round AZ Digital Solutions logo
 - Animated hero/orbit treatment, scrolling ticker, reveal-on-scroll effects and hover states
-- 11 service categories with enquiry-only calls to action
+- 11 service categories grouped into four filterable departments
+- Creative capabilities section (clearly labelled as service examples, not completed client work)
+- Scroll progress indicator, back-to-top control and refined focus states
 - About, process, FAQ, contact form and WhatsApp enquiry flow
 - Instagram link, SEO metadata, favicon and mobile navigation
 - Responsive mobile, tablet and desktop layouts
@@ -30,3 +32,11 @@ Business contact information is in `index.html` and the WhatsApp link uses the c
 - Insurance, loans and financial products depend on provider terms, eligibility, permissions and applicable rules. No approval, returns or outcomes are guaranteed.
 - Mutual fund-related promotion or services should be displayed only where the required registration/authorisation is in place.
 - Replace any future portfolio placeholders with genuine approved work before publishing.
+
+
+## Redesign notes
+- Existing logo, dark navy / gold palette, orbit animation, floating tags, ticker, hover effects and reveal-on-scroll motion are retained and refined.
+- Service filters are client-side and do not require a backend.
+- The enquiry form opens a prefilled WhatsApp message for the visitor to review and send.
+- No fabricated testimonials, ratings, project counts or client claims have been added. Add approved work samples and genuine reviews when available.
+- Respectful reduced-motion handling is included for visitors who request less animation.
