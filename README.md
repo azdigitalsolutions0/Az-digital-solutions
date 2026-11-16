@@ -1,12 +1,14 @@
-# AZ Digital Solutions Website
+# AZ Digital Solutions
 
-Static HTML, CSS and JavaScript website for GitHub Pages.
+Static website built with HTML, CSS and JavaScript.
 
-## Showcase sections added
-- 10 illustrative portfolio project concepts with category filters. These are sample concepts, not claims of completed client work.
-- 10 sample testimonial card layouts. All are explicitly marked as placeholder/demo copy and must be replaced with genuine customer feedback and permission before being represented as real reviews.
-- Preserves the existing AZ logo, navy/gold identity, orbit and floating elements, ticker, hover and scroll-reveal animations.
-- Adds scroll progress, back-to-top and responsive portfolio/review layouts.
+## Portfolio and reviews update
+- Added 60 portfolio concept showcase cards: 10 each across six categories.
+- Each concept is labelled as a concept; these are not presented as completed client projects.
+- Added category filters for the project gallery.
+- Added a customer feedback section with a WhatsApp feedback invitation.
+- No invented customer identities, ratings or testimonials are included. Add genuine reviews only with permission.
+- CSS-rendered project preview artwork is illustrative and does not claim client delivery.
 
 ## Publish
-Upload the contents of this folder to the root of the GitHub Pages repository and commit to the publishing branch.
+Upload the contents of this folder to the root of the GitHub Pages repository and commit the changes.
