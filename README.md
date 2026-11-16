@@ -1,14 +1,10 @@
-# AZ Digital Solutions
+# AZ Digital Solutions — Visual Redesign
 
-Static website built with HTML, CSS and JavaScript.
+- Preserves the existing logo, original brand palette and current animation system.
+- Adds an image-led, responsive 60-item portfolio gallery with six category filters.
+- Gallery cards use image previews, hover zoom, reveal motion and enquiry links.
+- Adds a designed customer feedback section with a WhatsApp invitation.
+- No fabricated customer reviews, client names, ratings or completed-project claims are included. Portfolio items are explicitly labelled as concept showcases.
+- Images are loaded from Unsplash image CDN; internet access is required for these previews.
 
-## Portfolio and reviews update
-- Added 60 portfolio concept showcase cards: 10 each across six categories.
-- Each concept is labelled as a concept; these are not presented as completed client projects.
-- Added category filters for the project gallery.
-- Added a customer feedback section with a WhatsApp feedback invitation.
-- No invented customer identities, ratings or testimonials are included. Add genuine reviews only with permission.
-- CSS-rendered project preview artwork is illustrative and does not claim client delivery.
-
-## Publish
-Upload the contents of this folder to the root of the GitHub Pages repository and commit the changes.
+Publish by uploading the contents of this folder to the root of the GitHub Pages repository and committing the changes.
