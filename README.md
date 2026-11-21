@@ -3,10 +3,10 @@
 A fresh responsive static website built with HTML, CSS and JavaScript.
 
 ## Included
-- Premium dark navy + champagne gold visual system
+- Premium emerald green + gold visual system with animated technology globe
 - User-supplied round AZ Digital Solutions logo
-- Animated hero/orbit treatment, scrolling ticker, reveal-on-scroll effects and hover states
-- 11 service categories with enquiry-only calls to action
+- Animated hero/globe/orbit treatment, five division cards, scrolling ticker, reveal-on-scroll effects and hover states
+- 12 service categories and 5 agency divisions with enquiry-only calls to action
 - About, process, FAQ, contact form and WhatsApp enquiry flow
 - Instagram link, SEO metadata, favicon and mobile navigation
 - Responsive mobile, tablet and desktop layouts
@@ -15,7 +15,7 @@ A fresh responsive static website built with HTML, CSS and JavaScript.
 ## Publish with GitHub Pages
 1. Extract this ZIP on your device.
 2. Upload all files and folders inside the extracted folder to the root of your existing GitHub repository (not the ZIP itself).
-3. Keep the `assets` folder and its files together.
+3. Keep the `assets` folder and all its files together. The CSS and JavaScript are loaded from `assets/style.css` and `assets/script.js`.
 4. Commit changes to the `main` branch.
 5. Open repository **Settings → Pages**.
 6. Choose **Deploy from a branch**, select `main` and `/(root)`, then Save.

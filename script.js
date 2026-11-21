@@ -13,3 +13,27 @@ document.querySelectorAll(".gallery-filter").forEach(button=>button.addEventList
   card.classList.toggle("is-hidden",filter!=="all"&&card.dataset.cat!==filter);
  });
 }));
+
+
+/* AZ signature interactions: subtle pointer glow and accessible reveal fallbacks */
+(() => {
+  const cards = document.querySelectorAll(".division-card");
+  if (window.matchMedia("(hover:hover) and (pointer:fine)").matches) {
+    cards.forEach(card => {
+      card.addEventListener("pointermove", event => {
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty("--pointer-x", `${event.clientX - rect.left}px`);
+        card.style.setProperty("--pointer-y", `${event.clientY - rect.top}px`);
+      });
+    });
+  }
+  document.querySelectorAll('a[href="#contact"][data-service]').forEach(link => {
+    link.addEventListener("click", () => {
+      const select = document.getElementById("serviceSelect");
+      if (select) {
+        select.value = link.dataset.service;
+        select.dispatchEvent(new Event("change", { bubbles: true }));
+      }
+    });
+  });
+})();
