@@ -1,0 +1,1 @@
+IMPORTANT: This is a temporary placeholder logo, not your official AZ logo. Replace this file with your official AZ Digital Solutions logo, keeping the filename az-logo-placeholder.svg, or update image paths in index.html.
