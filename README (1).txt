@@ -1,0 +1,1 @@
+Upload the contents of this folder into your existing GitHub repository's assets/ folder. The original supplied AZ logo is saved as az-logo.png without redesign. Your current website HTML still references az-logo-placeholder.svg; update those logo image paths to assets/az-logo.png before publishing. Keep favicon.svg and social-preview.svg as supporting assets.

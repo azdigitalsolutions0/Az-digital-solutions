@@ -1,42 +1,38 @@
-# AZ Digital Solutions — Complete Website Package
+# AZ Digital Solutions — website package
 
-A mobile-first, multi-page website for AZ Digital Solutions. Original AZ logo and supplied brand/contact details are included.
+This package preserves the existing six-page website, its design, original `assets/az-logo.png`, Supabase configuration, review form and enquiry form. It adds a private admin dashboard and a privacy policy.
 
 ## Pages
-- `index.html` — Home, service categories, business metrics, latest reviews
-- `services.html` — Searchable service directory
-- `about.html` — About and approach
-- `portfolio.html` — Capability showcase (not fabricated client case studies)
-- `reviews.html` — Public review submission, latest reviews and Google review link
-- `contact.html` — Enquiry form and contact channels
+- `index.html` — Home
+- `services.html` — Services
+- `about.html` — About
+- `portfolio.html` — Portfolio
+- `reviews.html` — Customer review submission and published reviews
+- `contact.html` — Enquiry form
+- `privacy.html` — Privacy policy
+- `admin.html` — Private admin dashboard (not listed in public navigation)
 
-## Upload to the existing GitHub repository (Android)
-1. Download and extract this ZIP.
-2. Open your GitHub repository: `azdigitalsolutions0/Az-digital-solutions`.
-3. Back up the existing repository first (download ZIP or create a branch).
-4. Upload/replace the files from this package at the repository root. Keep the `assets` folder and its `az-logo.png` together.
-5. Ensure `index.html`, `style.css`, `script.js`, and `config.js` are at the root (not inside another folder).
-6. Commit changes. GitHub Pages may take a few minutes to refresh.
+## Supabase setup
+Your existing public website is already configured in `config.js`. Do not replace the publishable key with a service-role key.
 
-## Supabase setup (required for live reviews and enquiry storage)
-1. Create/use a **dedicated AZ Digital Solutions Supabase project**.
-2. Open SQL Editor and run `supabase/setup.sql`.
-3. In Storage, create a public bucket named `review-photos`, set max file size to 2 MB and allowed MIME types to `image/jpeg`, `image/png`, `image/webp`.
-4. Open Project Settings > API. Copy Project URL and the public anon/publishable key.
-5. Edit `config.js`; replace the two `PASTE_...` values. Use only the public anon/publishable key. Never use the `service_role` key.
-6. Upload the updated `config.js` to GitHub and test a review submission and enquiry.
+If the existing reviews and enquiries are already working, do not rerun the root `setup.sql` unnecessarily. To enable the new admin dashboard:
 
-## Security and instant publication
-- Reviews are inserted with `is_visible = true` and immediately appear in the public list; no manual approval queue is included.
-- Public visitors can read visible reviews and submit reviews. Public users cannot update/delete reviews through the supplied policies.
-- Enquiries can be inserted publicly but cannot be read publicly.
-- Photo type and size are checked in the browser and Storage bucket. SQL policies restrict file extensions.
-- Before public promotion, add server-side CAPTCHA verification (Cloudflare Turnstile) and server-side rate limiting using an Edge Function. Do not treat browser-only validation as spam protection.
-- For an admin moderation/report/hide workflow, build a separate authenticated admin interface; it is intentionally not included in this public instant-publish starter.
+1. Open Supabase Dashboard → SQL Editor.
+2. Run `supabase/admin-setup.sql`.
+3. In Supabase Dashboard → Authentication → Users, create an admin user with your chosen email and a strong password.
+4. Copy that user's UUID.
+5. In SQL Editor, run this statement after replacing the placeholder with the actual UUID:
 
-## Important
-- No fabricated customer testimonials or project case studies are included.
-- The supplied business figures are displayed as provided by the owner.
-- Google reviews open the supplied Maps link.
-- The website can render without Supabase, but live review publishing and database-backed enquiries require the setup above. If Supabase is not configured, the contact form offers a WhatsApp handoff.
-- GitHub Pages can host this static site. Cloudflare Pages is optional; connect the same repository if you later want a `*.pages.dev` address.
+   `INSERT INTO public.admin_users (user_id) VALUES ('YOUR-AUTH-USER-UUID');`
+
+6. Open `https://azdigitalsolutions0.github.io/Az-digital-solutions/admin.html` and sign in with that admin email/password.
+
+There is no public admin sign-up form. Only a user whose UUID is in `public.admin_users` can access the dashboard data. RLS controls review visibility changes/deletion and enquiry reads.
+
+## CAPTCHA
+CAPTCHA has intentionally not been added, as requested. The public review form remains instant-publish. This means spam protection is limited; periodically check submissions in the admin panel.
+
+## Deployment
+Upload the contents of this folder (not the enclosing folder itself) to the root of the existing GitHub repository `azdigitalsolutions0/Az-digital-solutions`, keeping the `assets/` and `supabase/` folders. GitHub Pages should continue to serve the site from the `main` branch root.
+
+Keep `config.js` private to the extent possible and never add service-role secrets. The publishable key is intended for browser use and must be protected by correct RLS policies.

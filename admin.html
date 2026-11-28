@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#071a35">
+  <title>AZ Admin Panel</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .admin-wrap{width:min(1120px,92%);margin:3rem auto 5rem}
+    .admin-head{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:2rem}
+    .admin-panel{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.13);border-radius:18px;padding:clamp(1rem,3vw,2rem);margin:1rem 0}
+    .admin-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
+    .admin-stat{padding:1.2rem;border-radius:14px;background:rgba(40,130,220,.12);border:1px solid rgba(100,180,255,.18)}
+    .admin-stat strong{display:block;font-size:2rem}
+    .admin-tabs{display:flex;gap:.6rem;flex-wrap:wrap;margin:1rem 0}
+    .admin-tabs button,.admin-action{border:1px solid rgba(130,190,255,.3);border-radius:10px;padding:.7rem 1rem;background:#102b50;color:white;cursor:pointer}
+    .admin-tabs button.active{background:#1678d2}
+    .admin-item{padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.12);display:grid;grid-template-columns:1fr auto;gap:1rem}
+    .admin-item p{margin:.45rem 0;white-space:pre-wrap;overflow-wrap:anywhere}
+    .admin-actions{display:flex;gap:.5rem;flex-wrap:wrap;align-items:start}
+    .admin-action.danger{background:#652b35}.admin-action.good{background:#145b4c}
+    .admin-muted{opacity:.72;font-size:.9rem}.admin-photo{max-width:110px;max-height:90px;object-fit:cover;border-radius:8px}
+    .admin-message{margin:.7rem 0}.admin-message.error{color:#ff9b9b}.admin-message.success{color:#8de0bd}
+    .admin-field{display:grid;gap:.4rem;margin:.8rem 0}.admin-field input{width:100%;padding:.85rem;border-radius:9px}
+    @media(max-width:620px){.admin-item{grid-template-columns:1fr}.admin-actions{grid-column:1}}
+  </style>
+</head>
+<body>
+<header class="site-header"><div class="wrap header-inner">
+  <a class="brand" href="index.html"><img src="assets/az-logo.png" alt="AZ Digital Solutions"><span>AZ DIGITAL <b>SOLUTIONS</b></span></a>
+  <a class="text-link" href="index.html">← View website</a>
+</div></header>
+<main class="admin-wrap">
+  <div class="admin-head"><div><div class="eyebrow">PRIVATE WORKSPACE</div><h1>AZ Admin Panel</h1><p class="section-sub">Manage customer reviews and website enquiries.</p></div><button id="logout" class="btn btn-light" hidden>Log out</button></div>
+  <section id="login-panel" class="admin-panel">
+    <h2>Admin sign in</h2>
+    <p class="admin-muted">Use the admin email and password created in Supabase Authentication. Public sign-up is disabled here.</p>
+    <form id="login-form">
+      <label class="admin-field">Email<input name="email" type="email" autocomplete="username" required></label>
+      <label class="admin-field">Password<input name="password" type="password" autocomplete="current-password" required></label>
+      <button class="btn btn-primary" type="submit">Sign in securely ↗</button>
+    </form><p id="login-message" class="admin-message" role="status"></p>
+  </section>
+  <section id="dashboard" hidden>
+    <div class="admin-grid">
+      <div class="admin-stat"><span>All reviews</span><strong id="stat-reviews">—</strong></div>
+      <div class="admin-stat"><span>Published</span><strong id="stat-visible">—</strong></div>
+      <div class="admin-stat"><span>Hidden</span><strong id="stat-hidden">—</strong></div>
+      <div class="admin-stat"><span>Enquiries</span><strong id="stat-enquiries">—</strong></div>
+    </div>
+    <div class="admin-tabs"><button class="active" data-tab="reviews">Reviews</button><button data-tab="enquiries">Enquiries</button></div>
+    <section id="reviews-panel" class="admin-panel"><div class="admin-head"><h2>Customer reviews</h2><button id="refresh-reviews" class="admin-action">Refresh</button></div><div id="reviews-list" aria-live="polite">Loading…</div></section>
+    <section id="enquiries-panel" class="admin-panel" hidden><div class="admin-head"><h2>Website enquiries</h2><button id="refresh-enquiries" class="admin-action">Refresh</button></div><div id="enquiries-list" aria-live="polite">Loading…</div></section>
+    <p id="dashboard-message" class="admin-message" role="status"></p>
+  </section>
+</main>
+<footer class="site-footer"><div class="footer-bottom"><span>© <span id="year"></span> AZ Digital Solutions</span><span>Private admin area</span></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script><script src="admin.js"></script>
+</body></html>
