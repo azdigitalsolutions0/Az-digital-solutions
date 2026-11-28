@@ -1,8 +1,9 @@
-# AZ Digital Solutions Premium Website
-Upload/replace `index.html`, `style.css`, `script.js` in the root of your existing GitHub repository. Upload the full `assets` folder, preserving paths. Back up the current repository before replacing files.
+# AZ Digital Solutions — Multi-page website
 
-Included: original supplied logo, responsive navy/blue/cyan design, animated hero, counters (12,786+ Total Clients; 11,786+ Happy Clients; 45+ Skilled Professionals; 35+ Business Services), 35 service entries, category filters, WhatsApp enquiries, process, portfolio category placeholders, review slider, FAQ, social links and Google Maps.
+Pages: Home (`index.html`), Services (`services.html`), About (`about.html`), Portfolio (`portfolio.html`), Reviews (`reviews.html`), Contact (`contact.html`).
 
-Primary WhatsApp: +91 75640 02394. Backup: +91 94729 34864.
+Upload all six HTML files plus `style.css`, `script.js`, and the complete `assets` folder into the repository root. Keep filenames and folder paths exactly as shown. The home page is `index.html`.
 
-Important: Portfolio tiles are service-category showcases, not client case studies. Review slider statements are generic placeholders, not attributed customer testimonials; replace only with genuine approved reviews. This static site has no secure admin panel or private document upload; these require a secure backend and authentication. No website is 100% secure. Verify service availability and all business details before publishing.
+Primary WhatsApp: +91 75640 02394. Backup: +91 94729 34864. Instagram, Facebook and Maps links supplied by the owner are included. Public pricing is intentionally omitted.
+
+The achievement figures are owner-provided. Portfolio entries are capability categories, not claimed completed client projects. The Reviews page links to the supplied Google profile rather than inventing testimonials. Static front-end only: no secure admin, customer database, or private file upload is included. Add a secured backend separately if needed.
