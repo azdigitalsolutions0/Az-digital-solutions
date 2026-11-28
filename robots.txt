@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://azdigitalsolutions0.github.io/Az-digital-solutions/sitemap.xml
