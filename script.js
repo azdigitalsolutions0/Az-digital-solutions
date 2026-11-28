@@ -56,7 +56,7 @@
   }));
 
   async function photoUpload(file) {
-    if (!file) return null;
+    if (!file || !file.name) return null;
     if (!["image/jpeg","image/png","image/webp"].includes(file.type)) throw new Error("Please choose a JPG, PNG or WebP image.");
     if (file.size > 2*1024*1024) throw new Error("Photo must be 2 MB or smaller.");
     const ext = file.type==="image/png"?"png":file.type==="image/webp"?"webp":"jpg";
